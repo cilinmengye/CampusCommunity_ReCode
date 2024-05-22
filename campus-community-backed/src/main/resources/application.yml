@@ -1,0 +1,26 @@
+# yml配置信息书写与获取
+  # 三方技术配置信息
+    # 我们只需要写配置信息，具体会由框架自动读取
+  # 自定义配置信息
+    # 需要提取到自建配置文件中，同时需要自己写代码获取?
+spring:
+  application:
+    name: campus-community-backed
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/campuscommunity
+    username: root
+    password: 834430027
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  servlet:
+    multipart:
+      max-file-size: 20MB
+server:
+  port: 9090
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true # 开启驼峰命名和下划线命名的自动转换，避免发生在Entity中命名createTime, 但是数据库中的为create_time,两者匹配不上
